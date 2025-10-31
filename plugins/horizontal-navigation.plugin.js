@@ -1,8 +1,8 @@
 /**
  * @name Horizontal Navigation
  * @description Moves your vertical navigation bar to a horizontal position.
- * @version 1.0.0
- * @author Fxy
+ * @version 1.0.1
+ * @author Fxy/Grolly
  */
 
 let cachedNavbars = new Map();
@@ -49,7 +49,7 @@ const observer = new MutationObserver(() => {
     timeoutId = setTimeout(fixAllNavbars, 50);
 });
 observer.observe(document.body, { childList: true, subtree: true, attributes: true });
-setInterval(fixAllNavbars, 20);
+setInterval(fixAllNavbars, 500);
 
 // Initial call
 fixAllNavbars();
